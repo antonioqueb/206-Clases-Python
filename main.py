@@ -37,7 +37,8 @@ def index():
         student = Student(name=form.name.data, code='')
         db.session.add(student)
         db.session.commit()
-        return redirect(url_for('pdf_view', pdf_number=1))
+        # Redirijo a @app.route('/1')
+        return redirect(url_for('view_pdf1'))
     return render_template('index.html', form=form)
 
 
