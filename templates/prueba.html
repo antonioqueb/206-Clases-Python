@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #333;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <label for="code1">Ejercicio #1:</label><br>
+        {{ form.code1() }}<br>
+        <label for="code2">Ejercicio #2:</label><br>
+        {{ form.code2() }}<br>
+        <label for="code3">Ejercicio #3:</label><br>
+        {{ form.code3() }}<br>
+        <label for="code4">Ejercicio #4:</label><br>
+        {{ form.code4() }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
